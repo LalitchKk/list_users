@@ -131,18 +131,18 @@ class UserDetail extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 5, top: 5),
+                padding: const EdgeInsets.only(left: 10, top: 5),
                 child: Row(
                   children: [
                     const Icon(
                       Icons.location_city_sharp,
-                      size: 30,
+                      size: 20,
                       color: Color(0xFFF3FDE8),
                     ),
                     const SizedBox(
-                        width: 10), // Add some spacing between Icon and Text
+                        width: 30), // Add some spacing between Icon and Text
                     Text(
-                      "${user.address.suite} ${user.address.street}",
+                      user.address.suite,
                       style: const TextStyle(
                           fontSize: 13, color: Color(0xFFF3FDE8)),
                     ),
@@ -150,10 +150,15 @@ class UserDetail extends StatelessWidget {
                 ),
               ),
               Text(
+                user.address.street,
+                style: const TextStyle(fontSize: 10, color: Color(0xFFF3FDE8)),
+              ),
+              const Padding(padding: EdgeInsets.all(3.0)),
+              Text(
                 user.address.city,
                 style: const TextStyle(fontSize: 10, color: Color(0xFFF3FDE8)),
               ),
-              const Padding(padding: EdgeInsets.all(5.0)),
+              const Padding(padding: EdgeInsets.all(3.0)),
               Text(
                 user.address.zipcode,
                 style: const TextStyle(
@@ -161,7 +166,7 @@ class UserDetail extends StatelessWidget {
                     color: Color(0xFFF3FDE8),
                     letterSpacing: VisualDensity.maximumDensity),
               ),
-              const Padding(padding: EdgeInsets.all(4.0)),
+              const Padding(padding: EdgeInsets.all(3.0)),
             ],
           ),
         ),
@@ -189,7 +194,7 @@ class UserDetail extends StatelessWidget {
                       color: Color(0xFFF3FDE8),
                     ),
                     const SizedBox(
-                        width: 15), // Add some spacing between Icon and Text
+                        width: 10), // Add some spacing between Icon and Text
                     Text(
                       user.website,
                       style: const TextStyle(
@@ -208,11 +213,11 @@ class UserDetail extends StatelessWidget {
                       color: Color(0xFFF3FDE8),
                     ),
                     const SizedBox(
-                        width: 15), // Add some spacing between Icon and Text
+                        width: 10), // Add some spacing between Icon and Text
                     Text(
                       user.email,
                       style: const TextStyle(
-                          fontSize: 13, color: Color(0xFFF3FDE8)),
+                          fontSize: 10, color: Color(0xFFF3FDE8)),
                     ),
                   ],
                 ),
@@ -227,7 +232,7 @@ class UserDetail extends StatelessWidget {
                       color: Color(0xFFF3FDE8),
                     ),
                     const SizedBox(
-                        width: 15), // Add some spacing between Icon and Text
+                        width: 10), // Add some spacing between Icon and Text
                     Text(
                       user.phone,
                       style: const TextStyle(
